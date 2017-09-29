@@ -1,0 +1,68 @@
+noStroke();
+
+mouseMoved = function() {
+ if (mouseY > 193) {
+var bodyX = mouseX;
+var bodyY = mouseY;
+var bodyW = 118;
+var bodyH = bodyW/1.5;
+
+
+draw = function() {
+    //background
+    background(110, 212, 255);
+    fill(170, 255, 0);
+    rect(0,300,450,100);//ground
+    
+//creature
+
+//legs
+fill(105, 65, 0);
+quad(bodyX-20, bodyY+100, bodyX-40, bodyY+100, bodyX-20, bodyY-100, bodyX+20, bodyY-100);//left leg
+fill(105, 65, 0);
+quad(bodyX+20, bodyY+100, bodyX+40, bodyY+100, bodyX+20, bodyY-100, bodyX-20, bodyY-100);//rightleg
+
+//body
+  fill(255, 255, 255);
+   ellipse(bodyX, bodyY, bodyW, 106); // body
+   
+   //ears
+    ellipse(bodyX-20, bodyY-100, bodyH-40, 100); // left ear
+    fill(252, 221, 252);
+    ellipse(bodyX-20, bodyY-100, bodyH-100, 100); //inner left ear    
+    fill(252, 252, 252);
+    ellipse(bodyX+20, bodyY-100, bodyH-40, 100); // right ear   
+    fill(252, 221, 252);
+    ellipse(bodyX+20, bodyY-100, bodyH-100, 100); //inner right ear   
+    
+  //face and collar
+  fill(252, 252, 252);
+  ellipse(bodyX, bodyY-80, bodyH, 70); // face 
+  fill(0, 0, 0);
+  arc(bodyX, bodyY-50, 50, 20, 1, 180);//collar
+ 
+  //eyes 
+  //left eye
+  fill(46, 252, 0);
+  ellipse(bodyX-20, bodyY-90, 25, 25);//outer left eye
+  fill(0, 0, 0);
+  ellipse(bodyX-15, bodyY-90, 20, 20);//inner left eye 
+  fill(255, 255, 255);
+  ellipse(bodyX-20, bodyY-93, 15, 15);//shine left eye
+  fill(46, 252, 0);
+  //right eye
+  ellipse(bodyX+15, bodyY-90, 25, 25);//outer right eye
+  fill(0, 0, 0);
+  ellipse(bodyX+20, bodyY-90, 20, 20);//inner right eye
+  fill(255, 255, 255);
+  ellipse(bodyX+15, bodyY-93, 15, 15);//shine left eye
+  
+  //nose
+  fill(255, 191, 255);
+  triangle(bodyX-10, bodyY-75, bodyX+10, bodyY-75, bodyX, bodyY-60);
+  
+
+  
+};
+}
+};
